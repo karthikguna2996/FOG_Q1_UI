@@ -11,7 +11,7 @@ class BattlefieldServer extends Component{
     this.product()
   }
   product = async () =>{
-    const response = await fetch('http://localhost:3001/');
+    const response = await fetch('https://fog-q1-backend.onrender.com/');
     const data = await response.json();
     this.setState(() => ({settingsData:[...data]}))  
   }
