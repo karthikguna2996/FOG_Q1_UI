@@ -13,18 +13,24 @@
  
 
  .sidey{
-  width:7vw;
+  width:3vw;
  }
 
 .side-menu__tabs {
-  z-index: 10;
-  margin-top: 17vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
+  
+  display:flex;
+  flex-direction:column;
+  margin-top:200px;
+  width:5vw;
+  height:100vh;
 }
-
+.side_bar{
+  height:4vh;
+  width:2vw;
+  
+  margin :3px;
+}
+ 
 .side-menu__game:hover .side-menu__popup {
  
   opacity: 1;
@@ -63,6 +69,7 @@
   left: 3vh;
   transition: opacity 0.1s ease-in-out;
 }
+.sz{width : 4vh;}
 
 .side-menu__quit:hover {
   opacity: 1;
@@ -112,7 +119,7 @@
 .scroll{
   overflow-y:scroll;
   height:80vh;
-   
+a{width:3vw}
 }
 .server__infer{
   display:flex;
@@ -424,3 +431,123 @@ h4 {
   color: #ffffff;
   margin-bottom: 20px;
 }
+.vl {
+  border-left: 2px solid grey;
+  height: 100vh;
+  margin:7px;
+   
+ 
+   
+ 
+}
+.invite {
+  z-index: 9995;
+  width: 27vh;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 3.5vh;
+  padding-left: 1.5vh;
+  display: flex;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: auto;
+  right: 0%;
+  transform: translate(19vh);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.invite:hover {
+  transform: translate(0); /* Expand the div on hover */
+  background-color: rgba(0, 0, 0, 0.85); /* Add a background color for better visibility */
+}
+
+.invite__line {
+  height: 1px;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+.invite:hover .invite__line {
+  opacity: 1; /* Make lines visible on hover */
+}
+
+.invite__squad-h,
+.invite__online-h,
+.invite__offline-h,
+.invite__join-h,
+.invite__friend-info {
+  opacity: 0;
+  color: white;
+  width:100%;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transform: translateX(-5px);
+  padding: 0.5vh 1vh; /* Add padding for better text alignment */
+  border-radius: 3px; /* Add rounded corners */
+}
+
+.invite:hover .invite__squad-h,
+.invite:hover .invite__online-h,
+.invite:hover .invite__offline-h,
+.invite:hover .invite__join-h,
+.invite:hover .invite__friend-info {
+  opacity: 1;
+  transform: translateX(0); /* Slide text into view */
+}
+
+.invite__squad-h:hover,
+.invite__online-h:hover,
+.invite__offline-h:hover,
+.invite__join-h:hover,
+.invite__friend-info:hover {
+  background-color: white; /* Change background to white */
+  color: black; /* Change text to black */
+}
+
+.invite__join-icon.invite__join-icon--black {
+  display: none;
+}
+
+.invite:hover .invite__join-icon.invite__join-icon--black {
+  display: inline;
+}
+
+.invite__join-icon.invite__join-icon--default {
+  display: inline;
+}
+
+.invite:hover .invite__join-icon.invite__join-icon--default {
+  display: none;
+}
+
+.invite__offline-friend,
+.invite__online-friend {
+  opacity: 0.4;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-5px);
+}
+
+.invite:hover .invite__offline-friend,
+.invite:hover .invite__online-friend {
+  opacity: 1;
+  transform: translateX(0);  
+}
+.invite__offlin{
+  display:flex;
+}
+
+.invite__squad-h-w{
+  display:flex;
+  flex-direction: row;
+}
+
+.invite__join-w{
+  display:flex;
+  flex-direction: row;
+}
+
+
+

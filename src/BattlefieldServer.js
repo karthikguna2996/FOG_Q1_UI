@@ -22,36 +22,60 @@ class BattlefieldServer extends Component{
         <div className="server__body">
                
               
-          
+               
           <div className="sidey">
-  <div className="side-menu__tabs">
+            <div className="side-menu__tabs">
     {[
-      'Battlefield v',
-      'Battlefield 1',
-      'Battlefield 4',
-      'Battlefield Hardline',
-      'career',
-      'watch',
-      'news',
-      'help',
-    ].map((game, index) => (
+  {
+    "name": "Battlefield v",
+    "url": "https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601aafabd334e34cd4dbb8ba_side-menu__game-2.png"
+  },
+  {
+    "name": "Battlefield 1",
+    "url": "https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601aafab108eb6365513203b_side-menu__game.png"
+  },
+  {
+    "name": "Battlefield 4",
+    "url": "https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601aafac57edde91d49b301f_side-menu__game-1.png"
+  },
+  {
+    "name": "Battlefield Hardline",
+    "url": "https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601aafab2823bb5957cc1ffd_side-menu__game-3.png"
+  },
+  {
+    "name": "career",
+    "url": "https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601aafaa108eb614c813203a_side-menu__career.png"
+  },
+  {
+    "name": "watch",
+    "url": "https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601aafab68a3c97a6a478b8d_side-menu__watch.svg"
+  },
+  {
+    "name": "news",
+    "url": "https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601aafab332f0ade9870b435_side-menu__news.svg"
+  },
+  
+]
+.map((game, index) => (
       <a
         key={index}
-        href={`https://battlefield-4-webflow-rebuild.webflow.io/game?tab=tab-${game
+        
+        href={`https://battlefield-4-webflow-rebuild.webflow.io/game?tab=tab-${game.name
           .toLowerCase()
-          .replace(' ', '-')}`}
-        className={`side-menu__game side-menu__game--${game
-          .toLowerCase()
-          .replace(' ', '-')}`}
+          .replace(' ', '-')}`
+       }
+        
       >
-        <div className="side-menu__popup">
-          <div className="side-menu__text">{game}</div>
-        </div>
+        <img src = {game.url} alt = {index} className  = "side_bar"/>
+        
       </a>
     ))}
   </div>
-  <div className="side-menu__bar"></div>
+   
+   
 </div>
+ 
+<div class="vl"></div>
             <div className="server">
                  
                  
@@ -89,7 +113,7 @@ class BattlefieldServer extends Component{
 
                 </div>
 
-                {/* Buttons Section */}
+               
                 <div className="server__buttons-w">
                     {['join', 'spectate', 'join as commander'].map((action, index) => (
                         <div key={index} className="server__button">
@@ -109,17 +133,117 @@ class BattlefieldServer extends Component{
 
                 </div>
 
-                {/* Current Stats Section */}
+                 
                 <CurrentStats />
 
-                {/* Settings Section */}
+               
                 {!settingsData.length !== 0 ? (<Settings settings = {settingsData}/>)  :(<></>)}
 
-                {/* Map Rotation Section */}
+                 
                 <MapRotation />
                  </div>
                  </div>
-               
+                 <div data-w-id="6b37c036-931c-d490-861f-6b059f982253" className="invite">
+      <div className="invite__line"></div>
+
+      
+      <div className="invite__squad">
+        <div className="invite__squad-h-w">
+          <img
+            src="https://cdn.prod.website-files.com/6013fff62154adaa4600f932/601ab15999e303e7c202c28c_squad.svg"
+            loading="lazy"
+            alt=""
+            className="invite__squad-icon"
+          />
+          <div className="invite__squad-h">squad</div>
+        </div>
+
+        <div
+          data-w-id="6b37c036-931c-d490-861f-6b059f98225a"
+          className="invite__join-w"
+        >
+          <img
+            src="https://cdn.prod.website-files.com/6013fff62154adaa4600f932/601ab1596100550691c84f76_home__join-black.svg"
+            loading="lazy"
+            alt=""
+            className="invite__join-icon invite__join-icon--black"
+          />
+          <img
+            src="https://cdn.prod.website-files.com/6013fff62154adaa4600f932/601ab158769fa828e95f98df_home__join-default.svg"
+            loading="lazy"
+            alt=""
+            className="invite__join-icon invite__join-icon--default"
+          />
+          <div className="invite__join-h">squad join</div>
+        </div>
+      </div>
+
+      <div className="invite__line"></div>
+
+      
+      <div className="invite__online">
+        <div className="invite__squad-h-w">
+          <img
+            src="https://cdn.prod.website-files.com/6013fff62154adaa4600f932/601ab159d334e32483dbbcbb_online.svg"
+            loading="lazy"
+            alt=""
+            className="invite__online-icon"
+          />
+          <div className="invite__online-h">online</div>
+        </div>
+        <div
+          data-w-id="6b37c036-931c-d490-861f-6b059f982265"
+          className="invite__join-w"
+        >
+          <div className="invite__friend-picture-w">
+            <div className="invite__online-bar"></div>
+            <img
+              src="https://cdn.prod.website-files.com/6013fff62154adaa4600f932/601ab1585908791f051d4af4_home__friend-picture-MaryJane.png"
+              loading="lazy"
+              alt=""
+              className="invite__friend-picture"
+            />
+          </div>
+          <div className="invite__friend-info">
+            <div className="invite__friend-name">MaryJane</div>
+            <div className="invite__friend-status">Online</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="invite__line"></div>
+
+      
+      <div className="invite__offline">
+        <div className="invite__offlin">
+          <img
+            src="https://cdn.prod.website-files.com/6013fff62154adaa4600f932/601ab15904900760dbfa7f70_offline.svg"
+            loading="lazy"
+            alt=""
+            className="invite__offline-icon"
+          />
+          <div className="invite__offline-h">offline</div>
+        </div>
+        <div
+          data-w-id="6b37c036-931c-d490-861f-6b059f982274"
+          className="invite__join-w"
+        >
+          <div className="invite__friend-picture-w">
+            <div className="invite__offline-bar"></div>
+            <img
+              src="https://cdn.prod.website-files.com/6013fff62154adaa4600f932/601ab1583424fd3ddf23a848_home__friend-picture-420.png"
+              loading="lazy"
+              alt=""
+              className="invite__friend-picture"
+            />
+          </div>
+          <div className="invite__friend-info">
+            <div className="invite__friend-name">420</div>
+            <div className="invite__friend-status">offline</div>
+          </div>
+        </div>
+      </div>
+    </div>
         </div>
     );}
 };
@@ -272,7 +396,7 @@ const MapRotation = () => {
         mode: "conquest large",
         imageUrl: "https://cdn.prod.website-files.com/6013fff62154adaa4600f932/6039076d9b48792dbe261e07_browser__SI-next-image%20-%2004.png",
     },
-      // Add more maps as needed
+    
     ];
   
     return (
