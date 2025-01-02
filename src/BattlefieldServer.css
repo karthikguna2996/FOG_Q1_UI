@@ -20,7 +20,7 @@
   
   display:flex;
   flex-direction:column;
-  margin-top:200px;
+  margin-top:150px;
   width:5vw;
   height:100vh;
 }
@@ -434,7 +434,7 @@ h4 {
 .vl {
   border-left: 2px solid grey;
   height: 100vh;
-  margin:7px;
+  margin:9px;
    
  
    
